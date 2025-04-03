@@ -1,0 +1,831 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #343a40;
+  margin-bottom: 30px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 1;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.searchContainer {
+  display: flex;
+  width: 50%;
+  position: relative;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 12px 40px 12px 20px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  font-size: 16px;
+}
+
+.searchButton {
+  background: none;
+  border: none;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #343a40;
+  font-size: 18px;
+}
+
+.navLinks {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  background-color: #f8f9fa;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.navLinks a {
+  padding: 15px 25px;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  font-size: 16px;
+}
+
+.navLinks a.active {
+  background-color: #58daa8;
+  color: white;
+}
+
+.navLinks a:hover:not(.active) {
+  background-color: #e9ecef;
+}
+
+.bourseListContainer {
+  flex: 1;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.bourseListHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.bourseListHeader h2 {
+  font-size: 24px;
+  color: #343a40;
+}
+
+.bourseCount {
+  color: #6c757d;
+  font-size: 16px;
+}
+
+.bourseGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 25px;
+  width: 100%;
+}
+
+.bourseCard {
+  border: 1px solid #dee2e6;
+  padding: 25px;
+  border-radius: 10px;
+  background-color: white;
+  transition: box-shadow 0.3s, transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.bourseCard:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.universityLabel {
+  display: flex;
+  align-items: center;
+  color: #6c757d;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.universityIcon {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.bourseCard h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #343a40;
+}
+
+.bourseDescription {
+  color: #495057;
+  margin-bottom: 20px;
+  flex-grow: 1;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.placesInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #28a745;
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.placesIcon {
+  font-size: 18px;
+}
+
+.deadline {
+  font-size: 16px;
+  color: #dc3545;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.bourseActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.detailsButton {
+  background-color: #58daa8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.detailsButton:hover {
+  background-color: #4acb9a;
+}
+
+.downloadLink {
+  display: flex;
+  align-items: center;
+  color: #0d6efd;
+  font-weight: bold;
+  transition: color 0.3s;
+  font-size: 16px;
+}
+
+.downloadLink:hover {
+  color: #0a58ca;
+}
+
+.noResults {
+  text-align: center;
+  padding: 50px 0;
+  color: #6c757d;
+  font-size: 18px;
+  width: 100%;
+}
+
+.bourseDetail {
+  padding: 20px 0;
+  flex: 1;
+  width: 100%;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  color: #0d6efd;
+  font-weight: bold;
+  padding: 0;
+  margin-bottom: 25px;
+  cursor: pointer;
+  transition: color 0.3s;
+  font-size: 16px;
+}
+
+.backButton:hover {
+  color: #0a58ca;
+}
+
+.backButton svg {
+  margin-right: 10px;
+}
+
+.bourseDetailHeader {
+  margin-bottom: 35px;
+}
+
+.bourseDetailHeader h2 {
+  font-size: 32px;
+  color: #343a40;
+  margin-bottom: 15px;
+}
+
+.universityDetail {
+  display: flex;
+  align-items: center;
+  color: #6c757d;
+  font-size: 18px;
+}
+
+.universityDetail svg {
+  margin-right: 10px;
+}
+
+.detailSections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+  margin-bottom: 35px;
+  width: 100%;
+}
+
+.detailSection {
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.detailSection h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #343a40;
+}
+
+.detailSection p {
+  color: #495057;
+  font-size: 16px;
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.descriptionSection {
+  background-color: #e3f2fd;
+}
+
+.placesSection {
+  background-color: #e8f5e9;
+}
+
+.deadlineSection {
+  background-color: #fce4ec;
+}
+
+.pdfViewerContainer {
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.pdfViewerContainer h3 {
+  margin-bottom: 10px;
+  color: #343a40;
+}
+
+.pdfActions {
+  display: flex;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.pdfFrame {
+  border: none;
+  border-radius: 4px;
+  margin-top: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.viewPdfButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.viewPdfButton:hover {
+  background-color: #28a745;
+}
+
+.applicationContainer {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.applicationButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 30px;
+  background-color: #28a745;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  font-size: 16px;
+}
+
+.applicationButton:hover {
+  background-color: #218838;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+  
+  .searchContainer {
+    width: 100%;
+  }
+  
+  .bourseGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .detailSections {
+    grid-template-columns: 1fr;
+  }
+  
+  .pdfActions {
+    flex-direction: column;
+  }
+  
+  .applicationContainer {
+    justify-content: center;
+  }
+  
+  .applicationButton {
+    width: 100%;
+  }
+}
+/* Styles pour le bouton de retour */
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background-color: #f3f4f6;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.backButton:hover {
+  background-color: #e5e7eb;
+}
+
+/* Styles pour la section d'application */
+.applicationSection {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.applyButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.applyButton:hover {
+  background-color: #1d4ed8;
+}
+
+/* Styles pour le conteneur de formulaire */
+.applicationFormContainer {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Styles pour le formulaire */
+.applicationForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formGroup label {
+  font-weight: 500;
+  color: #374151;
+}
+
+.formInput {
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.formInput:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+.documentsNote {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin: 0.25rem 0;
+}
+
+.submitButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background-color: #059669;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.submitButton:hover {
+  background-color: #047857;
+}
+/* Styles pour le bouton de retour */
+.backButton, .backLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background-color: #f3f4f6;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+  transition: background-color 0.3s ease;
+  color: inherit;
+  text-decoration: none;
+}
+
+.backButton:hover, .backLink:hover {
+  background-color: #e5e7eb;
+}
+
+/* Styles pour la section d'application */
+.applicationSection {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.applyButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.applyButton:hover {
+  background-color: #1d4ed8;
+}
+
+/* Styles pour l'en-tête de la page de candidature */
+.applicationPageHeader {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.applicationPageHeader h1 {
+  margin: 0.5rem 0;
+  font-size: 1.75rem;
+  color: #111827;
+}
+
+.applicationDescription {
+  margin: 1rem 0 2rem;
+  color: #6b7280;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Conteneur principal de la page de détail */
+.bourseDetail {
+  background: #ffffff;
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 40px auto;
+  animation: slideIn 0.6s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* En-tête de la section de détail */
+.bourseDetailHeader {
+  border-bottom: 2px solid #e5e5e5;
+  margin-bottom: 35px;
+  padding-bottom: 20px;
+}
+
+.bourseDetailHeader h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.universityDetail {
+  font-size: 1.2rem;
+  color: #555;
+  display: flex;
+  align-items: center;
+}
+
+.universityDetail svg {
+  margin-right: 10px;
+  color: #58daa8;
+}
+
+/* Sections détaillées */
+.detailSections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.detailSection {
+  background: #e8fff6;
+  padding: 30px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.detailSection:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.detailSection h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+.detailSection p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Conteneur PDF */
+.pdfViewerContainer {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 40px;
+}
+
+.pdfViewerContainer h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.pdfActions {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.viewPdfButton,
+.downloadLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  text-decoration: none;
+}
+
+/* Bouton Voir PDF */
+.viewPdfButton {
+  background: #58daa8;
+  color: #fff;
+  border: none;
+}
+
+.viewPdfButton:hover {
+  background: #3e896c;
+  transform: scale(1.05);
+}
+
+/* Lien Télécharger PDF */
+.downloadLink {
+  border: 2px solid #0d6efd;
+  color: #0d6efd;
+  background: transparent;
+}
+
+.downloadLink:hover {
+  background: #0d6efd;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Section de candidature */
+.applicationSection {
+  background: #f1f3f5;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+}
+
+.applicationSection h3 {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.applyButton {
+  background: #58daa8;
+  color: #fff;
+  padding: 15px 35px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  display: block;        /* Permet de le traiter comme un bloc */
+  margin: 0 auto;        /* Centre horizontalement */
+}
+
+.applyButton:hover {
+  background: #3e896c;
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .bourseDetail {
+    padding: 30px;
+    margin: 20px 10px;
+  }
+
+  .bourseDetailHeader h2 {
+    font-size: 2rem;
+  }
+
+  .detailSections {
+    gap: 20px;
+  }
+
+  .applicationSection h3 {
+    font-size: 1.8rem;
+  }
+}
+.filters {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.filterIcon {
+  font-size: 18px;
+  color: #333;
+}
+
+.filter select { /* Scoped to .filter class */
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  background-color: white;
+  transition: border-color 0.3s ease;
+}
+
+.filter select:focus { /* Scoped to .filter class */
+  border-color: #007bff;
+  outline: none;
+}
+
+.filter option { /* Scoped to .filter class */
+  padding: 8px;
+}
